@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout cu Grid și CSS</title>
+    <style>
+        /* Resetarea marginilor și padding-urilor */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Stiluri generale pentru pagină */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Stiluri pentru header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        /* Stiluri pentru grid-ul principal */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.6em;
+            color: #333;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .card a:hover {
+            background-color: #4cae4c;
+        }
+
+        /* Efecte hover pentru card */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Galeria de Imagini</h1>
+    </header>
+
+    <!-- Container cu grid -->
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Imagine 1">
+            <div class="card-content">
+                <h3>Proiect 1</h3>
+                <p>Descrierea scurtă a proiectului 1. Detalii interesante și relevante despre proiect.</p>
+                <a href="#">Vezi detalii</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Imagine 2">
+            <div class="card-content">
+                <h3>Proiect 2</h3>
+                <p>Descrierea scurtă a proiectului 2. Oferă informații clare despre realizările echipei.</p>
+                <a href="#">Vezi detalii</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Imagine 3">
+            <div class="card-content">
+                <h3>Proiect 3</h3>
+                <p>Descrierea scurtă a proiectului 3. Un proiect interesant cu multe funcționalități inovative.</p>
+                <a href="#">Vezi detalii</a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Imagine 4">
+            <div class="card-content">
+                <h3>Proiect 4</h3>
+                <p>Descrierea scurtă a proiectului 4. Un proiect cu scopuri și obiective clare pentru viitor.</p>
+                <a href="#">Vezi detalii</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
